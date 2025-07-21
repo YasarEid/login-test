@@ -46,7 +46,7 @@ selenium_automation_project/
 
 ---
 
-## 🔐 Setting Up Environment Variables
+## Setting Up Environment Variables
 
 Create a `.env` file at the project root with these URLs:
 
@@ -56,7 +56,7 @@ BASE_URL=https://practicetestautomation.com
 
 ---
 
-## 📦 How to Get Started
+## How to Get Started
 
 1. Clone this repo to your machine:
 
@@ -75,7 +75,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Running the Tests
+## Running the Tests
 
 Simply run:
 
@@ -87,7 +87,7 @@ Pytest will pick up and run all the test cases in the `tests/` folder.
 
 ---
 
-## 🔍 Tests Included
+## Tests Included
 
 | Test Case                           | What it does                                     |
 |-------------------------------------|-------------------------------------------------|
@@ -99,7 +99,7 @@ Pytest will pick up and run all the test cases in the `tests/` folder.
 
 ---
 
-## 💡 Why This Approach?
+## Why This Approach?
 
 - Using **Page Object Model (POM)** makes tests easier to read and maintain  
 - Explicit waits ensure tests wait for page elements to load properly  
@@ -108,7 +108,7 @@ Pytest will pick up and run all the test cases in the `tests/` folder.
 
 ---
 
-## 🤝 About Me
+## About Me
 
 Hi, I'm Yasar Naser, a QA Engineer passionate about test automation and writing clear, maintainable code.  
 If you have any questions or want to connect, feel free to reach me at:  
