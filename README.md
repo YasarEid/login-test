@@ -9,22 +9,23 @@ Welcome! This project uses Selenium with Python to automate end-to-end tests for
 
 The test suite covers these scenarios:
 
-1. Logging in with **valid** username and password  
+1. Logging in with **valid** username and password (using centralized test data)  
 2. Trying to log in with **invalid** credentials and capturing the error message  
 3. Checking if the **logout button** or success message appears after logging in  
 4. Trying to access a **protected page** without logging in  
-5. Logging out and verifying that the session ends properly  
+5. Logging out and verifying that the session ends properly and the protected page is no longer accessible  
 
 ---
 
 ## Technologies Used
 
-- **Python 3.x**  
+- **Python 3.x**  Python 3.12.6
 - **Selenium WebDriver** for browser automation  
 - **Pytest** as the testing framework  
 - **webdriver-manager** for managing browser drivers automatically  
 - **python-dotenv** to handle environment variables (like URLs)  
 - Following the **Page Object Model (POM)** to organize the code  
+- **Centralized test data** management in `test_data.py` for easy maintenance  
 
 ---
 
@@ -39,6 +40,7 @@ selenium_automation_project/
 ├── tests/
 │   └── test_login.py        # The test cases themselves
 ├── conftest.py              # Setup code like WebDriver initialization
+├── test_data.py             # Centralized test data (usernames, passwords, error messages)
 ├── .env                     # Environment variables (URLs)
 ├── requirements.txt         # Required Python packages
 └── README.md                # This file
@@ -48,7 +50,7 @@ selenium_automation_project/
 
 ## Setting Up Environment Variables
 
-Create a `.env` file at the project root with these URLs:
+Create a `.env` file at the project root with this content:
 
 ```env
 BASE_URL=https://practicetestautomation.com
@@ -80,7 +82,7 @@ pip install -r requirements.txt
 Simply run:
 
 ```bash
-pytest tests/
+python -m pytest tests/test_login.py
 ```
 
 Pytest will pick up and run all the test cases in the `tests/` folder.
@@ -104,6 +106,7 @@ Pytest will pick up and run all the test cases in the `tests/` folder.
 - Using **Page Object Model (POM)** makes tests easier to read and maintain  
 - Explicit waits ensure tests wait for page elements to load properly  
 - Using environment variables keeps config clean and flexible  
+- Centralized test data management simplifies maintenance and avoids duplication
 - Writing tests with **pytest** allows for modular, readable test code  
 
 ---
